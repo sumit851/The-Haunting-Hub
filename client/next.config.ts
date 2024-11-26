@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   experimental: {
     serverActions: true,
   },
+  transpilePackages: ["lucide-react"],
 };
 
 export default nextConfig;
