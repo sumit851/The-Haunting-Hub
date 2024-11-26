@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 import { ThemeProvider } from "@/components/theme-provider";
+import fav from "../../public/images/favicon.ico";
 import "./globals.css";
 
 export default function RootLayout({
@@ -10,6 +12,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href={fav.src} />
+      </Head>
       <body>
         <ThemeProvider
           attribute="class"
@@ -19,7 +24,7 @@ export default function RootLayout({
         >
           <Navbar />
           <main>{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>
