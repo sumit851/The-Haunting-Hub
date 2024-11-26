@@ -1,7 +1,9 @@
+"Use client";
 import Link from "next/link";
 import React from "react";
 import { Search, SquarePen, BellPlus, UserRound } from "lucide-react";
 import Image from "next/image";
+import { ModeToggle } from "./Toggle";
 
 type Props = {};
 
@@ -41,6 +43,9 @@ const Navbar = (props: Props) => {
             </div>
             <div className="right-block">
               <div className="flex items-center space-x-6  ">
+                <div className=" w-9 h-3 flex items-center justify-center">
+                  <ModeToggle />
+                </div>
                 <div className="post cursor-pointer">
                   <Link href="/post">
                     <SquarePen className="text-white " />
